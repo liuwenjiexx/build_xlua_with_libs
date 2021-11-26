@@ -1,7 +1,10 @@
-mkdir build64 & pushd build64
+call windows.bat
+set OUTPUT=build64
+
+mkdir %OUTPUT% & pushd %OUTPUT%
 cmake -DLUAC_COMPATIBLE_FORMAT=ON -G "Visual Studio 14 2015 Win64" ..
 popd
-cmake --build build64 --config Release
+cmake --build %OUTPUT% --config Release
 md plugin_lua53\Plugins\x86_64
-copy /Y build64\Release\xlua.dll plugin_lua53\Plugins\x86_64\xlua.dll
+copy /Y %OUTPUT%\Release\xlua.dll plugin_lua53\Plugins\x86_64\xlua.dll
 pause
