@@ -1,6 +1,6 @@
 call ../windows.bat
 set OUTPUT=build\lua-5.3.5\x32
-set TARGET_DIR=x32
+set TARGET_DIR=lua-5.3.5\x32
 
 if exist %OUTPUT% ( rmdir /Q/S %OUTPUT% )
 mkdir %OUTPUT% & pushd %OUTPUT%
