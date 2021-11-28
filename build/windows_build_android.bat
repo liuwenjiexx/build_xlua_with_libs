@@ -22,7 +22,7 @@ if exist "%BUILD_PATH%" ( rmdir /Q/S "%BUILD_PATH%" )
 echo 0
 mkdir "%BUILD_PATH%"
 echo 1
-%CMAKE% -H.\ -B.\%BUILD_PATH% "-GAndroid Gradle - Ninja" -DANDROID_ABI=%ANDROID_ABI% -DANDROID_NDK=%ANDROID_NDK% -DCMAKE_BUILD_TYPE=Relase -DCMAKE_MAKE_PROGRAM=%NINJA% -DCMAKE_TOOLCHAIN_FILE=./cmake/android.windows.toolchain.cmake "-DCMAKE_CXX_FLAGS=-std=c++11 -fexceptions" -DPBC=ON
+%CMAKE% -H.\ -B.\%BUILD_PATH% "-GAndroid Gradle - Ninja" -DANDROID_ABI=%ANDROID_ABI% -DANDROID_NDK=%ANDROID_NDK% -DCMAKE_BUILD_TYPE=Relase -DCMAKE_MAKE_PROGRAM=%NINJA% -DCMAKE_TOOLCHAIN_FILE=./cmake/android.windows.toolchain.cmake "-DCMAKE_CXX_FLAGS=-std=c++11 -fexceptions"
 echo 2
 %NINJA% -C .\%BUILD_PATH%
 
